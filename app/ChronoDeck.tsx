@@ -525,7 +525,17 @@ export default function ChronoDeck() {
           <button type="submit">解析</button>
         </form>
         <div className="top-actions">
-          <button className="icon-button" onClick={() => setLight((value) => !value)} aria-label="切换主题">{light ? "☾" : "☼"}</button>
+          <button
+            className={`theme-switch ${light ? "is-light" : "is-dark"}`}
+            onClick={() => setLight((value) => !value)}
+            aria-label={`切换为${light ? "深色" : "浅色"}模式`}
+            aria-pressed={!light}
+            title={`当前为${light ? "浅色" : "深色"}模式`}
+          >
+            <span>☼</span>
+            <i />
+            <span>☾</span>
+          </button>
           <button className="avatar" aria-label="个人中心">Y</button>
         </div>
       </header>
