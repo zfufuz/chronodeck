@@ -295,7 +295,7 @@ export default function ChronoDeck() {
   const [focusEvent, setFocusEvent] = useState<TimeEvent | null>(null);
   const [focusSeconds, setFocusSeconds] = useState(25 * 60);
   const [running, setRunning] = useState(false);
-  const [light, setLight] = useState(false);
+  const [light, setLight] = useState(true);
   const quickRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
